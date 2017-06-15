@@ -1,0 +1,12 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+h4 {
+    text-align: center;
+}
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+}
