@@ -1,4 +1,4 @@
-time = 3;
+time = 4;
 window.onload = function() {
         canv = document.getElementById("gc");
         ctx = canv.getContext("2d");
@@ -46,7 +46,6 @@ function game() {
             ctx.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2);
             if (trail[i].x == px && trail[i].y == py && tail != 5) {
                 tail = Math.max(trail.length - i, 5);
-                time = Math.max(time - (tail - 5), 5);
             }
         }
         trail.push({ x: px, y: py });
@@ -56,7 +55,6 @@ function game() {
 
         if (ax == px && ay == py) {
             tail++;
-            time++;
             _bol = true;
             while (_bol == true) {
                 _bol = false;
@@ -75,7 +73,7 @@ function game() {
     ctx.font = "20px comic sans";
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
-    ctx.fillText("level: " + (time - 5), 40, canv.height - 20);
+    ctx.fillText("level: " + (time - 4), 40, canv.height - 20);
 }
 
 function keyPush(evt) {
